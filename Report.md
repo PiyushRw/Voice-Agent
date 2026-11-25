@@ -55,4 +55,4 @@ flowchart LR
 ## 4. Scalability (1,00,000 Users), Security, Costs & Dependencies
 
 - **100K User Scaling:** `100,000` users (`~10,000` calls/day × `5` min over `10h`) ≈ `84` average / `~250` peak concurrent calls (`~1.5M` min/month). Scale via managed PostgreSQL + Redis distributed locks, `pgvector` / Qdrant for multi-tenant RAG, autoscaled containerized LiveKit voice workers, and async post-call summary queues.
-- **Security, Feasibility & Dependencies:** API keys stay server-side; browsers receive 10-min room-scoped JWTs; no raw audio is persisted. SaaS pricing (`₹999–₹2,999/month` + metered minutes) covers WebRTC, STT, LLM, and SLA-backed TTS costs. All runtime imports are verified in [`requirements.txt`](requirements.txt) and [`requirements-live.txt`](requirements-live.txt).
+- **Security, Feasibility & Dependencies:** API keys stay server-side; browsers receive 10-min room-scoped JWTs; no raw audio is persisted. SaaS pricing (`₹999–₹2,999/month` + metered minutes) covers WebRTC, STT, LLM, and SLA-backed TTS costs. All runtime imports are consolidated and verified in [`requirements.txt`](requirements.txt).

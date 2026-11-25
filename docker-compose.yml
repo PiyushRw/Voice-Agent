@@ -11,7 +11,7 @@ services:
     build:
       context: .
       args:
-        REQUIREMENTS: requirements-live.txt
+        DOWNLOAD_MODELS: "true"
     env_file: .env
     command: ["python","-m","backend.voice.agent","start"]
     volumes:
